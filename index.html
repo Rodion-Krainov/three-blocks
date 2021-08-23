@@ -1,0 +1,241 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        a {
+            color: black;
+        }
+        .post-wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        .post-item {
+            padding: 10px;
+        }
+        .post-item-wrap {
+            background: #F7F7F2;
+            position: relative;
+            height: 380px;
+        }
+
+        .post-item-wrap:hover:after {
+            top: 5px;
+            left: 5px;
+            transform: rotate(2deg);
+        }
+        .post-link {
+            text-decoration: none;
+            display: block;
+            padding: 30px;
+        }
+        .post-title {
+            color: #33261D;
+            width: min-content;
+            margin-bottom: 10px;
+            padding: 5px;
+            position: relative;
+            left: -30px;
+            top: -30px;
+            transition: .3s ease-in-out;
+        }
+
+        .post-header {
+            font-weight: 300;
+            color: #FF0000;
+
+        }
+
+        .post-content {
+            color: #A69888;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .contacts {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .post-content #numbers {
+            display: flex;
+            flex-direction: column;
+
+        }
+        .third {
+            background-color: greenyellow;
+            border-bottom-right-radius: 5px;
+        }
+        .second {
+            background-color: yellow;
+            border-bottom-right-radius: 5px;
+        }
+        .first {
+            background-color: cyan;
+            border-bottom-right-radius: 5px;
+        }
+        table {
+            border-spacing: 10px;
+        }
+        td p:first-child {
+            margin-bottom: 5px; /*расстояние сверху вниз*/
+        }
+        table td:nth-child(1) {
+            text-align: right;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+        table td:nth-child(2) {
+            padding-left: 10px; /*изменение по ширине*/
+        }
+        #pdfs {
+            display: flex;
+            flex-direction: row;
+        }
+        .pdf {
+            display: flex;
+            flex-direction: column;
+        }
+        .images {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .company-name {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .company-name h5 {
+            position: relative;
+            top: -20px;
+        }
+        .post-link input {
+            display: block;
+            background-color: #FF0000;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            color: #F7F7F2;
+            font-size: large;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .post-item {
+                flex-basis: 50%;
+                flex-shrink: 0;
+            }
+        }
+        @media (min-width: 960px) {
+            .post-item {
+                flex-basis: 33.333333333%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="post-wrap">
+    <div class="post-item">
+        <div class="post-item-wrap">
+            <a href="#" class="post-link">
+                <div class="company-name">
+                    <h3 class="post-title first">Производитель</h3>
+                    <h5>ТОО КАЗХИМСИНТЕЗ</h5>
+                </div>
+
+                <table>
+                    <tr>
+                        <td class="post-content">Сфера деятельности:</td>
+                        <td class="post-content"><b>производство бытовой химии</b></td>
+                    </tr>
+                    <tr>
+                        <td class="post-content">Регион работы:</td>
+                        <td class="post-content"><b>Казахстан</b></td>
+                    </tr>
+                </table>
+                <div class="images">
+                    <img src="" alt="img">
+                    <img src="" alt="img">
+                    <img src="" alt="img">
+                    <img src="" alt="img">
+                    <img src="" alt="img">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="post-item">
+        <div class="post-item-wrap">
+            <a href="#" class="post-link">
+                <h3 class="post-title second">Информация</h3>
+                <table>
+                    <tr>
+                        <td class="post-content"><b>Способы оплаты:</b></td>
+                        <td class="post-content">безналичный расчет</td>
+                    </tr>
+                    <tr>
+                        <td class="post-content"><b>Способы доставки:</b></td>
+                        <td class="post-content">самовывоз<br>транспортная компания</td>
+                    </tr>
+                </table>
+                <div id="pdfs">
+                    <div class="pdf"><b>Коммерческое предложение</b><br><img src="" alt="pdf"></div>
+                    <div class="pdf"><b>Прайс-лист</b><br><img src="" alt="pdf"></div>
+                </div>
+
+            </a>
+        </div>
+    </div>
+
+    <div class="post-item">
+        <div class="post-item-wrap">
+            <a href="#" class="post-link">
+                <h3 class="post-title third">Реквизиты</h3>
+                <table id="thirdTable">
+                    <tr>
+                        <td class="post-content"><b>Адрес:</b></td>
+                        <td class="post-content">г.Алматы, пр.Абая 46, офис 402</td>
+                    </tr>
+                    <tr>
+                        <td class="post-content"><b>Телефон:</b></td>
+                        <td class="post-content"><p>8 (727) 502-30-40</p>
+                            <p>8 (777) 502-48-48</p></td>
+                    </tr>
+                    <tr>
+                        <td class="post-content"><b>E-mail:</b></td>
+                        <td class="post-content">info@kazhhim.kz</td>
+                    </tr>
+                    <tr>
+                        <td class="post-content"><b>Сайт:</b></td>
+                        <td class="post-content">http://www.kazhhim.kz</td>
+                    </tr>
+                    <tr>
+                        <td class="post-content"><b>Соц-сети:</b></td>
+                    </tr>
+                    <tr>
+                        <td><img src="" alt="vk">
+                            <img src="" alt="inst"></td>
+                    </tr>
+                </table>
+                <input type="button" value="Оставить заявку">
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
